@@ -21,19 +21,22 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
 
       - name: Install dependencies
         run: |
-          cd client
-          npm install
+          if [ -d "client" ]; then
+            cd client && npm install
+          else
+            npm install
+          fi
 
       - name: Build
         run: |
-          cd client
-          npx vite build --outDir ../dist --base ./
-        env:
-          VITE_BASE: ./
+          if [ -d "client" ]; then
+            cd client && npx vite build --outDir ../dist --base ./
+          else
+            npx vite build --outDir dist --base ./
+          fi
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3

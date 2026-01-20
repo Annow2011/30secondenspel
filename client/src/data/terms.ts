@@ -1,0 +1,95 @@
+export type Difficulty = 'easy' | 'medium' | 'hard';
+export type Duration = 'short' | 'long';
+
+export const TERMS = {
+  easy: [
+    "Pizza", "Amsterdam", "Netflix", "Donald Trump", "Facebook", "Fiets", "Koffie", "Sneeuw", "Dolfijn", "Hamer",
+    "Banaan", "Gitaar", "Voetbal", "Koning Willem-Alexander", "Eiffeltoren", "Micky Mouse", "Ikea", "Chocolade", "Regenboog", "Tandenborstel",
+    "Harry Potter", "Coca Cola", "Dierentuin", "Zomer", "Kerstman", "iPhone", "McDonalds", "Supermarkt", "Vliegtuig", "Zwemmen",
+    "Bioscoop", "Pannenkoek", "Spiderman", "Tulp", "Maan", "Schoenen", "Droom", "Vakantie", "Instagram", "Hond",
+    "Kat", "Trein", "Klok", "Spiegel", "Computer", "Aardbei", "Kikker", "Politie", "Brandweer", "Ziekenhuis",
+    "Max Verstappen", "Youtube", "TikTok", "Fortnite", "Minecraft", "Sinterklaas", "Paashaas", "Vrijheidsbeeld", "Titanic", "Leonardo DiCaprio",
+    "Parijs", "Londen", "Berlijn", "Rome", "Spanje", "Melk", "Kaas", "Brood", "Ei", "Appel",
+    "Zon", "Wolken", "Wind", "Strand", "Zee", "Auto", "Bus", "Tram", "Metro", "Boot",
+    "Tafel", "Stoel", "Bank", "Bed", "Kast", "Pen", "Potlood", "Papier", "Boek", "Krant",
+    "Televisie", "Radio", "Telefoon", "Laptop", "Tablet", "Bril", "Hoed", "Jas", "Broek", "Sokken",
+    "Voetbal", "Tennis", "Hockey", "Basketbal", "Volleybal", "Goud", "Zilver", "Brons", "Diamant", "Parel",
+    "Sinterklaas", "Paard", "Schoen", "Cadeau", "Zaklamp", "Rugzak", "Tent", "Kampvuur", "Marshmallow", "Zonnebril",
+    "Handdoek", "Zandkasteel", "IJsco", "Zwemband", "Duikplank", "Surfbord", "Ski's", "Snowboard", "Arrenslee", "Warme chocolademelk",
+    "Schaatsen", "Wanten", "Muts", "Sjaal", "Regenjas", "Paraplu", "Laarzen", "Modder", "Regenplas", "Bliksem",
+    "Donder", "Mist", "Hagel", "Orkaan", "Tornado", "Aardbeving", "Vulkaan", "Oceaan", "Woestijn", "Oase",
+    "Oerwoud", "Bergen", "Gletsjer", "Waterval", "Rivier", "Meer", "Eiland", "Strandbal", "Picknick", "Mandje",
+    "Barbecue", "Hamburger", "Hotdog", "Frieten", "Salade", "Appeltaart", "Slagroom", "IJsje", "Lolly", "Suikerspin",
+    "Popcorn", "Chips", "Cola", "Fanta", "Sprite", "Sap", "Water", "Thee", "Koffieboon", "Melkpak",
+    "Suiker", "Zout", "Peper", "Olijfolie", "Azijn", "Knoflook", "Ui", "Tomaat", "Komkommer", "Sla",
+    "Paprika", "Wortel", "Broccoli", "Bloemkool", "Spinazie", "Bonen", "Erwten", "Maïs", "Aardappel", "Rijst",
+    "Pasta", "Spaghetti", "Pizza", "Pannenkoek", "Wafel", "Cake", "Koekje", "Drop", "Snoepje", "Kauwgom",
+    "Leeuw", "Tijger", "Olifant", "Giraffe", "Zebra", "Aap", "Beer", "Wolf", "Vos", "Konijn",
+    "Muis", "Rat", "Hamster", "Cavia", "Vogel", "Papegaai", "Uil", "Adelaar", "Pinguïn", "Kikker",
+    "Slang", "Krokodil", "Schildpad", "Hagedis", "Spin", "Mier", "Bie", "Vlinder", "Vlieg", "Mug",
+    "Hond", "Kat", "Paard", "Koe", "Schaap", "Varken", "Geit", "Kip", "Eend", "Gans",
+    "Kasteel", "Ridder", "Prinses", "Draak", "Toverstaf", "Heks", "Tovenaar", "Reus", "Kabouter", "Elf",
+    "Piraat", "Schateiland", "Schatkist", "Anker", "Zeilschip", "Raket", "Astronaut", "Planeet", "Ster", "Telescoop",
+    "Brandweerauto", "Politieauto", "Ambulance", "Graafmachine", "Vrachtwagen", "Tractor", "Helikopter", "Straaljager", "Duikboot", "Luchtballon",
+    "Dolfijn", "Haai", "Walvis", "Krab", "Kreeft", "Octopus", "Zeepaardje", "Kwal", "Zeeschildpad", "Goudvis",
+    "Meeuw", "Duif", "Kraai", "Raaf", "Zwaan", "Flamingo", "Pelikaan", "Pinguïn", "Specht", "Mus",
+    "Vleermuis", "Egel", "Eekhoorn", "Ree", "Hert", "Wild zwijn", "Bever", "Otter", "Das", "Mol",
+    "Gitaar", "Piano", "Drumstel", "Viool", "Fluit", "Trompet", "Saxofoon", "Harp", "Harmonica", "Accordeon",
+    "Penseel", "Verf", "Canvas", "Beeldhouwwerk", "Museum", "Galerie", "Fotocamera", "Microfoon", "Podium", "Gordijn",
+    "Kroon", "Scepter", "Troon", "Wapenstilstand", "Vlag", "Volkslied", "Paspoort", "Portemonnee", "Sleutel", "Slot",
+    "Paraplu", "Zonnebril", "Rugzak", "Koffer", "Paspoort", "Zaklamp", "Batterij", "Oplader", "Hoofdtelefoon", "Luidspreker"
+  ],
+  medium: [
+    "Elon Musk", "Albert Einstein", "Leonardo da Vinci", "Marie Curie", "Nelson Mandela", "Winston Churchill", "Abraham Lincoln", "Cleopatra", "Julius Caesar", "Alexander de Grote",
+    "Griekse Goden", "Mount Everest", "Amazoneregenwoud", "Sahara woestijn", "Noorderlicht", "Zonsverduistering", "Koraalrif", "Grand Canyon", "Niagara watervallen", "Victoria watervallen",
+    "Buckingham Palace", "Vaticaanstad", "Kremlin", "Witte Huis", "Pentagon", "Silicon Valley", "Wall Street", "Hollywood", "Broadway", "Las Vegas",
+    "Klassieke Muziek", "Jazz", "Rock 'n Roll", "Hip Hop", "Reggae", "Heavy Metal", "Punk", "Disco", "Techno", "Country",
+    "Impressionisme", "Surrealisme", "Abstracte Kunst", "Cubisme", "Pop Art", "Renaissance", "Barok", "Griekse Architectuur", "Gotiek", "Art Deco",
+    "Astronomie", "Geologie", "Meteorologie", "Ecologie", "Archeologie", "Paleontologie", "Genetica", "Immunologie", "Toxicologie", "Farmacologie",
+    "Olympiade", "WK Voetbal", "Tour de France", "Wimbledon", "Super Bowl", "Grand Prix", "NBA", "Major League Baseball", "Ryder Cup", "America's Cup",
+    "Internet", "Wereldwijd Web", "Sociale Media", "Smartphones", "Cloud Computing", "Artificiële Intelligentie", "Blockchain", "Cryptovaluta", "Virtuele Realiteit", "Augmented Reality",
+    "E-mail", "Videochat", "Streaming", "Podcast", "Blog", "Vlog", "Influencer", "Hashtag", "Algoritme", "Data",
+    "Duurzaamheid", "Klimaatverandering", "Hernieuwbare Energie", "Recycling", "Biologische Landbouw", "Veganisme", "Fair Trade", "Microfinanciering", "Vrijwilligerswerk", "Goede Doelen",
+    "Globalisering", "Verstedelijking", "Demografische Transitie", "Migratie", "Integratie", "Multiculturalisme", "Individualisering", "Secularisering", "Digitalisering", "Automatisering",
+    "Vrijheid van Meningsuiting", "Mensenrechten", "Democratie", "Rechtsstaat", "Scheiding der Machten", "Parlement", "Grondwet", "Verkiezingen", "Coalitie", "Oppositie",
+    "Inflatie", "Deflatie", "Recessie", "Economische Groei", "Begrotingstekort", "Staatsschuld", "Rente", "Wisselkoers", "Aandelenmarkt", "Investeringen",
+    "Logistiek", "Supply Chain", "Marketing", "Branding", "Public Relations", "Human Resources", "Management", "Ondernemerschap", "Innovatie", "Strategie",
+    "Psychologie", "Sociologie", "Filosofie", "Theologie", "Linguïstiek", "Communicatiewetenschap", "Politicologie", "Rechtsgeleerdheid", "Bedrijfskunde", "Economie",
+    "Geneeskunde", "Tandheelkunde", "Farmacie", "Verpleegkunde", "Fysiotherapie", "Psychotherapie", "Diergeneeskunde", "Agronomie", "Biotechnologie", "Nanotechnologie",
+    "Ruimtevaart", "Luchtvaart", "Scheepvaart", "Spoorwegen", "Wegenbouw", "Telecommunicatie", "Energievoorziening", "Watervoorziening", "Afvalverwerking", "Stedenbouw"
+  ],
+  hard: [
+    "Quantum Fysica", "Existentialisme", "Hypotheekrenteaftrek", "Stikstofcrisis", "Blockchain", "De Nachtwacht", "Vincent van Gogh", "Ludwig van Beethoven", "Relativiteitstheorie", "Fotosynthese",
+    "Inflatie", "Democratie", "Communisme", "Kapitalisme", "Globalisering", "Microbiologie", "Neurologie", "Psychologie", "Sociologie", "Antropologie",
+    "Machu Picchu", "Taj Mahal", "Chinese Muur", "Petra", "Colosseum", "Schrodinger's Kat", "Zwart Gat", "Supernova", "Melkweg", "Andromedanevel",
+    "Shakespeare", "Dante Alighieri", "Homerus", "Goethe", "Tolstoj", "Bierbrouwerij", "Windmolenpark", "Waterstofauto", "Kerncentrale", "Zonnepaneel",
+    "Kunstmatige Intelligentie", "Machine Learning", "Big Data", "Cloud Computing", "Internet of Things", "Virtuele Realiteit", "Augmented Reality", "Metaverse", "NFT", "Cryptocurrency",
+    "Paleolithicum", "Neolithicum", "Bronstijd", "IJzertijd", "Middeleeuwen", "Renaissance", "Verlichting", "Industriële Revolutie", "Informatie Tijdperk", "Toekomst",
+    "DNA", "RNA", "Eiwit", "Cel", "Weefsel", "Orgaan", "Stelsel", "Organisme", "Populatie", "Ecosysteem",
+    "Biosfeer", "Atmosfeer", "Hydrosfeer", "Lithosfeer", "Asthenosfeer", "Tektoniek", "Vulkanisme", "Erosie", "Verwering", "Sedimentatie",
+    "Metamorfose", "Stollingsgesteente", "Afzettingsgesteente", "Metamorf gesteente", "Mineraal", "Kristal", "Edelsteen", "Halffabricaat", "Grondstof", "Delfstof",
+    "Fossiele brandstof", "Duurzame energie", "Klimaatverandering", "Broeikaseffect", "Zure regen",
+    "Epistemologie", "Metafysica", "Fenomenologie", "Ontologie", "Hermeneutiek", "Dialectiek", "Stoïcisme", "Nihilisme", "Pragmatisme", "Utilitarisme",
+    "Fibonacci-reeks", "Priemgetal", "Fractal", "Logaritme", "Algoritme", "Entropie", "Thermodynamica", "Zwaartekrachtsgolven", "Deeltjesversneller", "Higgsboson",
+    "Klassieke conditionering", "Cognitieve dissonantie", "Maslow's hiërarchie", "Panopticum", "Sociale constructivisme", "Paradigmaverschuiving", "Geopolitiek", "Buitenlandse directe investeringen", "Handelsbalans", "Bruto Binnenlands Product",
+    "Cyberspace", "E-commerce", "Deep Web", "Darknet", "Firewall", "Encryptie", "Biometrie", "Nanotechnologie", "Genetische manipulatie", "Crispr-Cas9",
+    "Stamceltherapie", "Immunotherapie", "Microplastics", "Biodiversiteit", "Circulaire economie", "Ecologische voetafdruk", "Hernieuwbare bronnen", "Waterstofeconomie", "Kernfusie", "Geothermische energie",
+    "Magna Carta", "Franse Revolutie", "Amerikaanse Burgeroorlog", "Koude Oorlog", "Val van de Berlijnse Muur", "Apartheid", "Dekolonisatie", "Europese Unie", "Verenigde Naties", "NAVO",
+    "Rembrandt van Rijn", "Johannes Vermeer", "Claude Monet", "Pablo Picasso", "Salvador Dalí", "Andy Warhol", "Frida Kahlo", "Michelangelo", "Leonardo da Vinci", "Donatello",
+    "Mozart", "Bach", "Chopin", "Tchaikovsky", "Stravinsky", "Jazz-improvisatie", "Opera", "Ballet", "Architectuur", "Bauhaus",
+    "Griekse mythologie", "Noorse mythologie", "Egyptische mythologie", "Hindoeïsme", "Boeddhisme", "Islam", "Christendom", "Jodendom", "Spiritualiteit", "Atheïsme",
+    "Cybersecurity", "Phishing", "Malware", "Ransomware", "Social engineering", "Data-ethiek", "Algoritmische bias", "Digitale kloof", "Netneutraliteit", "Open Source",
+    "Transcendentalisme", "Deconstructie", "Poststructuralisme", "Postmodernisme", "Existentiële angst", "Sisyfusarbeid", "Ockham's scheermes", "Plato's grot", "Socratische methode", "Categorische imperatief",
+    "Schrödinger-vergelijking", "Heisenberg-onzekerheidsprincipe", "Fermi-paradox", "Drake-vergelijking", "M-theorie", "Kwantumverstrengeling", "Gravitatie-lens", "Donkere materie", "Donkere energie", "Kosmische achtergrondstraling",
+    "Malthusiaanse catastrofe", "Tragedy of the commons", "Gini-coëfficiënt", "Pareto-efficiëntie", "Nash-evenwicht", "Speltheorie", "Gevangenendilemma", "Onzichtbare hand", "Keynesiaanse economie", "Oostenrijkse school",
+    "Neuroplasticiteit", "Synaptische transmissie", "Dopaminerge systeem", "Prefrontale cortex", "Limbisch systeem", "Amygdala", "Hippocampus", "Neurotransmitters", "Bloed-hersenbarrière", "Elektro-encefalogram",
+    "Genoomsequencing", "Epigenetica", "Methylering", "Telomeren", "Zelfzuchtige gen", "Natuurlijke selectie", "Seksuele selectie", "Adaptieve radiatie", "Punctuated equilibrium", "Convergentie",
+    "Antropoceen", "Holoceen", "Pleistoceen", "Mesozoïcum", "Paleozoïcum", "Precambrium", "Platentektoniek", "Mantelconvectie", "Subductie", "Mid-oceanische rug"
+  ]
+};
+
+export function getRandomTerms(count: number, difficulty: Difficulty): string[] {
+  const pool = TERMS[difficulty];
+  const shuffled = [...pool].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+}

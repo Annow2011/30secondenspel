@@ -28,6 +28,8 @@ jobs:
 
       - name: Build
         run: npx vite build client --outDir ../dist --base ./
+        env:
+          VITE_BASE: ./
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3

@@ -3,6 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: "main"
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -23,10 +24,16 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd client
+          npm install
 
       - name: Build
-        run: npx vite build client --outDir ../dist --base ./
+        run: |
+          cd client
+          npx vite build --outDir ../dist --base ./
+        env:
+          VITE_BASE: ./
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
